@@ -116,17 +116,17 @@ const whoToFollowItems = ref([
         image: 'https://picsum.photos/200/200'
     },
     {
-        name: 'Firda',
+        name: 'Virda',
         handle: '@virsa',
         image: 'https://picsum.photos/200/200'
     },
     {
-        name: 'Fina',
+        name: 'Vina',
         handle: '@vina',
         image: 'https://picsum.photos/200/200'
     },
     {
-        name: 'Fifi',
+        name: 'Vifi',
         handle: '@viviw',
         image: 'https://picsum.photos/200/200'
     }

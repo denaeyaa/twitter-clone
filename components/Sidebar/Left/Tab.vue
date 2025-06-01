@@ -14,7 +14,7 @@
     </nuxt-link>
 </template>
 <script setup>
-const { defaultTransition } = useTailwinConfig()
+const { defaultTransition } = useTailwindConfig()
 
 const props = defineProps({
     active: {

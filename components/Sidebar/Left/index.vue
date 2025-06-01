@@ -1,7 +1,6 @@
 <template>
     <div class="flex flex-col h-screen">
 
-
         <div class="p-2 my-2 rounded-full hover:bg-blue-50 w-min dark:hover:bg-white/20" :class="defaultTransition">
             <nuxt-link to="/">
                 <div class="w-8 h-8">
@@ -10,9 +9,7 @@
             </nuxt-link>
         </div>
 
-        <div class="mt-2 space-y-3">
-
-            <SidebarLeftTab active>
+        <div class="mt-2 space-y-3 flex-grow overflow-y-auto"> <SidebarLeftTab active>
                 <template v-slot:icon>
                     <HomeIcon />
                 </template>
@@ -30,7 +27,6 @@
                 </template>
             </SidebarLeftTab>
 
-
             <SidebarLeftTab>
                 <template v-slot:icon>
                     <BellIcon />
@@ -39,7 +35,6 @@
                     Notifications
                 </template>
             </SidebarLeftTab>
-
 
             <SidebarLeftTab>
                 <template v-slot:icon>
@@ -59,7 +54,6 @@
                 </template>
             </SidebarLeftTab>
 
-
             <SidebarLeftTab>
                 <template v-slot:icon>
                     <DocumentTextIcon />
@@ -68,7 +62,6 @@
                     Lists
                 </template>
             </SidebarLeftTab>
-
 
             <SidebarLeftTab>
                 <template v-slot:icon>
@@ -106,7 +99,7 @@
 
         </div>
 
-        <div class="flex flex-row items-center justify-center px-2 py-2 mx-auto mt-auto mb-5 rounded-full cursor-pointer w-14 xl:w-full hover:bg-gray-100 dark:hover:bg-dim-800"
+        <div class="flex flex-row items-center justify-center px-2 py-2 mx-auto mb-5 mt-auto rounded-full cursor-pointer w-14 xl:w-full hover:bg-gray-100 dark:hover:bg-dim-800"
             :class="defaultTransition" @click="emits('onLogout')">
 
             <div class="flex flex-row">
@@ -121,15 +114,11 @@
                 </div>
 
             </div>
-
-            <!-- ICON -->
             <div class="hidden ml-auto xl:block">
                 <div class="w-6 h-6">
                     <ChevronDownIcon />
                 </div>
             </div>
-
-
 
         </div>
 
@@ -139,7 +128,7 @@
 import { HomeIcon } from "@heroicons/vue/solid"
 import { HashtagIcon, BellIcon, InboxIcon, BookmarkIcon, DocumentTextIcon, UserIcon, DotsCircleHorizontalIcon, PencilIcon, ChevronDownIcon } from "@heroicons/vue/outline"
 
-const { defaultTransition } = useTailwinConfig()
+const { defaultTransition } = useTailwindConfig()
 const emits = defineEmits(['onTweet', 'onLogout'])
 
 const props = defineProps({
